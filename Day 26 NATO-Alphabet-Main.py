@@ -34,8 +34,32 @@ phonetic_dictionary ={row.letter : row.code for (index, row) in data.iterrows()}
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 
-word = input("Enter a word: ").upper()
+def generate_phonetic():
+    
+    word = input("Enter a word: ").upper()
 
-output_list = [phonetic_dictionary[letter] for letter in word]
+    try:
+          output_list = [phonetic_dictionary[letter] for letter in word]
 
-print(output_list)
+    except KeyError:
+          print("Sorry, only letters in the alphabet please.")
+          generate_phonetic()
+    else:
+          print(output_list)
+
+generate_phonetic()
+
+
+"""         DICTIONARY COMPREHENSION                  """
+
+import random
+
+names = ["Alex","Beth","Caroline","Dave","Elanor","Freddie"]
+
+students_scores = {student:random.randint(1,100) for student in names}
+
+print(students_scores)
+
+passed_students = {student:score for (student, score) in students_scores.items() if int(score) >= 60 }
+
+print(passed_students)
