@@ -1,0 +1,74 @@
+1. Check your current branch:
+
+git branch
+
+
+2. If you see master (not main), push using:
+
+git push -u origin master
+
+
+3. If you have no commits yet, add and commit your files:
+
+git add .
+
+git commit -m "Initial commit"
+
+Then  git push -u origin master
+
+4. If you want your branch to be called main:
+
+git branch -M main
+
+git push -u origin main
+
+
+--------------------------------------------------------------------------------
+
+
+
+GitHub
+
+To push your code to a GitHub repository, follow these steps:
+
+1. Initialize Git (if you haven’t already):
+
+git init
+
+2. Add the remote repository:
+
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+
+
+
+Replace USERNAME and REPOSITORY with your actual GitHub username and
+
+repository name.
+
+3. Add your files:
+
+git add .
+
+4. Commit your changes:
+
+git commit -m "Your commit message"
+
+5. Push your code:
+
+If this is your first push and you want to push to the main branch:
+
+git push -u origin main
+
+
+For subsequent pushes, just use:
+
+git push
+
+Note:
+
+Make sure you have permission to push to the repository.
+
+If you’re prompted, enter your GitHub username and password
+ (or use a personal access token).
+
+
