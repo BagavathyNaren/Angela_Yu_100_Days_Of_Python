@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "45051723-6a44bb15-9404-4058-b1a2-b4b05da164d8",
 		"name": "Cafe & Wifi",
+		"description": "This is my own Cafe @ Wifi API Documentation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
