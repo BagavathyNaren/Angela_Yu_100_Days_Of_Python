@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "45051723-6a44bb15-9404-4058-b1a2-b4b05da164d8",
+		"name": "Cafe & Wifi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cafes",
+			"id": "45051723-97b1dbdb-9107-48e0-9a35-610da515a43c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Cafe",
+			"id": "45051723-ee24a487-ca40-4da2-a27d-365f21e07ed7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/random",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Cafe By Location",
+			"id": "45051723-6cf9603e-12f2-4fd0-8c4f-919582d19fc6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/search?loc=Shoreditch",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "loc",
+							"value": "Shoreditch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Cafe",
+			"id": "45051723-bfe08457-d8d8-4f76-98b5-3cfd15d928f0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Timberyard",
+							"type": "text",
+							"uuid": "e0839ffa-586a-4fdf-9e8f-9d1dcf22af5b"
+						},
+						{
+							"key": "map_url",
+							"value": "https://www.google.com/maps/place/TY+Seven+Dials/@51.5128761,-0.1295574,17z/data=!3m1!4b1!4m5!3m4!1s0x487604cd0ed11587:0x3feff9f93e76a986!8m2!3d51.5128761!4d-0.1273687?hl=en-GB",
+							"type": "text",
+							"uuid": "46f1f32c-b894-4a33-92d7-a0446762a612"
+						},
+						{
+							"key": "seats",
+							"value": "150+",
+							"type": "text",
+							"uuid": "2252949e-7d0f-4893-b41c-fba392eef021"
+						},
+						{
+							"key": "loc",
+							"value": "Soho",
+							"type": "text",
+							"uuid": "44f0aa2f-01ea-41f9-9252-2812505123e7"
+						},
+						{
+							"key": "img_url",
+							"value": "https://cdn.venuescanner.com/photos/qiUqV/aad7dea72a6fb6f3388ab27ba56b7740.jpg\n",
+							"type": "text",
+							"uuid": "13685b63-b199-4fa7-a4b8-c59a7af6875c"
+						},
+						{
+							"key": "id",
+							"value": "420",
+							"type": "text",
+							"uuid": "16b0f2bf-6272-4f5b-b684-ab67b8e09a47"
+						},
+						{
+							"key": "has_wifi",
+							"value": "True",
+							"type": "text",
+							"uuid": "bdcc8346-905c-491e-ad83-885b121ceb0d"
+						},
+						{
+							"key": "has_toilet",
+							"value": "True",
+							"type": "text",
+							"uuid": "84ac7a60-5d6f-4ecd-8e95-cf0a21b1500b"
+						},
+						{
+							"key": "has_sockets",
+							"value": "True",
+							"type": "text",
+							"uuid": "79d08fc3-c7f8-4d58-8a53-e25b6ee128d4"
+						},
+						{
+							"key": "coffee_price",
+							"value": "£3",
+							"type": "text",
+							"uuid": "fadae00c-32e1-4a97-a0e7-401cb6f44b72"
+						},
+						{
+							"key": "can_take_calls",
+							"value": "True",
+							"type": "text",
+							"uuid": "82646b5c-83fd-4741-acdb-4e21782bd0a1"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update all fields in the cafe",
+			"id": "45051723-66253b5f-eed5-48ce-bdcf-f68bc3b424fd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/add?can_take_calls=True&coffee_price=£2.50&has_sockets=True&has_toilet=False&has_wifi=True&id=7&img_url=https://cdn.venuescanner.com/photos/qiUqV/aad7dea72a6fb6f3388ab27ba56b7740.jpg\n&loc=Soho&map_url=https://www.google.com/maps/place/TY+Seven+Dials/@51.5128761,-0.1295574,17z/data=!3m1!4b1!4m5!3m4!1s0x487604cd0ed11587:0x3feff9f93e76a986!8m2!3d51.5128761!4d-0.1273687?hl=en-GB&name=Timberyard&seats=150+",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"add"
+					],
+					"query": [
+						{
+							"key": "can_take_calls",
+							"value": "True"
+						},
+						{
+							"key": "coffee_price",
+							"value": "£2.50"
+						},
+						{
+							"key": "has_sockets",
+							"value": "True"
+						},
+						{
+							"key": "has_toilet",
+							"value": "False"
+						},
+						{
+							"key": "has_wifi",
+							"value": "True"
+						},
+						{
+							"key": "id",
+							"value": "7"
+						},
+						{
+							"key": "img_url",
+							"value": "https://cdn.venuescanner.com/photos/qiUqV/aad7dea72a6fb6f3388ab27ba56b7740.jpg\n"
+						},
+						{
+							"key": "loc",
+							"value": "Soho"
+						},
+						{
+							"key": "map_url",
+							"value": "https://www.google.com/maps/place/TY+Seven+Dials/@51.5128761,-0.1295574,17z/data=!3m1!4b1!4m5!3m4!1s0x487604cd0ed11587:0x3feff9f93e76a986!8m2!3d51.5128761!4d-0.1273687?hl=en-GB"
+						},
+						{
+							"key": "name",
+							"value": "Timberyard"
+						},
+						{
+							"key": "seats",
+							"value": "150+"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Cofee Price For Cafe",
+			"id": "45051723-ae86969a-9852-4420-80e7-46a9341f495d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/update-price/7?new_price=£2.50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"update-price",
+						"7"
+					],
+					"query": [
+						{
+							"key": "new_price",
+							"value": "£2.50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a cafe by id",
+			"id": "45051723-e31ee639-ac4f-48a2-b363-2ee9357aa029",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/report-closed/22?api-key=TopSecretAPIKey",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report-closed",
+						"22"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "TopSecretAPIKey"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
