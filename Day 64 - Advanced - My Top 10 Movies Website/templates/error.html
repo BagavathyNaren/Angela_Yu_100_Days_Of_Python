@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Error - Movie App{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+  <div class="card shadow-lg p-4 mx-auto" style="max-width: 500px;">
+    <h1 class="text-danger mb-3">⚠️ Oops!</h1>
+    <h4>{{ message or "Something went wrong." }}</h4>
+    <p class="text-muted mt-3">
+      We couldn’t find any matching movies or there was a problem contacting the OMDb API.
+    </p>
+    <a href="{{ url_for('add_movie') }}" class="btn btn-primary mt-3">🔍 Try Another Search</a>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary mt-3">🏠 Back to Home</a>
+  </div>
+</div>
+{% endblock %}

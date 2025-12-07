@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Select Movie{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-5 fw-bold">🎥 Select the Correct Movie</h2>
+
+  {% if options %}
+  <div class="row g-4 justify-content-center">
+    {% for movie in options %}
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex align-items-stretch">
+      <div class="card border-0 shadow-sm movie-card w-100">
+        <div class="overflow-hidden rounded-top">
+          <img
+            src="{{ movie.Poster if movie.Poster != 'N/A' else 'https://via.placeholder.com/300x450?text=No+Image' }}"
+            class="card-img-top movie-poster"
+            alt="{{ movie.Title }} Poster"
+          >
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title mb-1 fw-semibold text-truncate" title="{{ movie.Title }}">{{ movie.Title }}</h6>
+          <p class="text-muted small mb-3">{{ movie.Year }}</p>
+          <a
+            href="{{ url_for('find_movie', id=movie.imdbID) }}"
+            class="btn btn-primary btn-sm w-100"
+          >➕ Add This Movie</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="text-center text-muted mt-4">No movies found. Try searching again.</p>
+  {% endif %}
+
+  <div class="text-center mt-5">
+    <a href="{{ url_for('add_movie') }}" class="btn btn-secondary btn-lg">🔙 Back to Search</a>
+  </div>
+</div>
+
+<style>
+.movie-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.movie-poster {
+  height: 300px;
+  object-fit: cover;
+}
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+{% endblock %}
